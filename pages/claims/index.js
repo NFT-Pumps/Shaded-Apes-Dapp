@@ -142,7 +142,7 @@ export default function Claim() {
                         <>
                           {(currentUseState.isWaiting == false) ?
                             <>
-                              <label className="connected">Number of Claimable Crypto Overlords's (1-{currentUseState.whiteListPass.q}):</label>
+                              <label className="connected">Number of Claimable Shaded Ape's (1-{currentUseState.whiteListPass.q}):</label>
                               <div className="">
                                 <div className="input-group">
                                   <div className="input-group-prepend">
