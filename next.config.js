@@ -23,7 +23,7 @@ module.exports = {
     mainWWW: 'https://www.shadedapesnft.com/',
     title: 'Shaded Apes NFT',
     links : {
-      opensea : "https://opensea.io/collection/Shaded-Apes-NFT",
+      opensea : "https://opensea.io/collection/shaded-apes-nft",
       discord : "",
       twitter : ""
     },
