@@ -16,7 +16,7 @@ module.exports = {
     network: 'mainnet',
     chainId: 1,
     pageHeader : 'Shaded Apes NFT',
-    pageText : 'Talking That Shit',
+    pageText : 'Stay Shaded',
     //mintType: "Whitelist",
     blockExplorerURL: 'https://.etherscan.io/',
     www: 'https://www.shadedapesnft.com/',
