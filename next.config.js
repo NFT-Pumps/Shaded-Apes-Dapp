@@ -5,12 +5,12 @@ module.exports = {
   analyticsId: '7vsHWbYwcKpA3lFTng2Qe9iNzE7',
   env: {
     siteTitle: "Shaded Apes Minting Dapp",
-    contractAddress: "0xadbA291EfA70CC82FA188dE7C2CFCf456D95B0C6",
+    contractAddress: "0x1B0DBE243914e2d00CbB0065Da552ec5e57EB7d2",
     infuraID: "045e9c65387a4200aa8559c347fa19a4",
     defaultGas: 125000,//75000,
     mintType : "Pre-Sale", //Pre-Sale Public
     enforceWhitelist : true,
-    ethValue : "0.025",
+    ethValue : "0.00",
     ethWLValue : "0.00",
     debug: false,
     network: 'mainnet',

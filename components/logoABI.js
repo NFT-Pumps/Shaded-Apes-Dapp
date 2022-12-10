@@ -47,6 +47,17 @@ export default function ContractABI() {
          "type":"constructor"
       },
       {
+         "inputs":[
+            {
+               "internalType":"address",
+               "name":"operator",
+               "type":"address"
+            }
+         ],
+         "name":"OperatorNotAllowed",
+         "type":"error"
+      },
+      {
          "anonymous":false,
          "inputs":[
             {
@@ -256,6 +267,21 @@ export default function ContractABI() {
          "inputs":[
             
          ],
+         "name":"OPERATOR_FILTER_REGISTRY",
+         "outputs":[
+            {
+               "internalType":"contract IOperatorFilterRegistry",
+               "name":"",
+               "type":"address"
+            }
+         ],
+         "stateMutability":"view",
+         "type":"function"
+      },
+      {
+         "inputs":[
+            
+         ],
          "name":"ProjectTeam",
          "outputs":[
             {
@@ -271,7 +297,7 @@ export default function ContractABI() {
          "inputs":[
             {
                "internalType":"address",
-               "name":"to",
+               "name":"operator",
                "type":"address"
             },
             {
@@ -325,36 +351,6 @@ export default function ContractABI() {
          "inputs":[
             {
                "internalType":"uint256",
-               "name":"quantity",
-               "type":"uint256"
-            }
-         ],
-         "name":"bogoMint",
-         "outputs":[
-            
-         ],
-         "stateMutability":"payable",
-         "type":"function"
-      },
-      {
-         "inputs":[
-            
-         ],
-         "name":"bogoMintIsOpen",
-         "outputs":[
-            {
-               "internalType":"bool",
-               "name":"",
-               "type":"bool"
-            }
-         ],
-         "stateMutability":"view",
-         "type":"function"
-      },
-      {
-         "inputs":[
-            {
-               "internalType":"uint256",
                "name":"tokenId",
                "type":"uint256"
             }
@@ -364,6 +360,56 @@ export default function ContractABI() {
             
          ],
          "stateMutability":"nonpayable",
+         "type":"function"
+      },
+      {
+         "inputs":[
+            
+         ],
+         "name":"buyBonusMultiplier",
+         "outputs":[
+            {
+               "internalType":"uint256",
+               "name":"",
+               "type":"uint256"
+            }
+         ],
+         "stateMutability":"view",
+         "type":"function"
+      },
+      {
+         "inputs":[
+            
+         ],
+         "name":"crossMintAddress",
+         "outputs":[
+            {
+               "internalType":"address",
+               "name":"",
+               "type":"address"
+            }
+         ],
+         "stateMutability":"view",
+         "type":"function"
+      },
+      {
+         "inputs":[
+            {
+               "internalType":"address",
+               "name":"_to",
+               "type":"address"
+            },
+            {
+               "internalType":"uint256",
+               "name":"quantity",
+               "type":"uint256"
+            }
+         ],
+         "name":"crossmint",
+         "outputs":[
+            
+         ],
+         "stateMutability":"payable",
          "type":"function"
       },
       {
@@ -541,6 +587,21 @@ export default function ContractABI() {
          "inputs":[
             
          ],
+         "name":"publicCrossMintIsOpen",
+         "outputs":[
+            {
+               "internalType":"bool",
+               "name":"",
+               "type":"bool"
+            }
+         ],
+         "stateMutability":"view",
+         "type":"function"
+      },
+      {
+         "inputs":[
+            
+         ],
          "name":"publicMintIsOpen",
          "outputs":[
             {
@@ -557,6 +618,49 @@ export default function ContractABI() {
             
          ],
          "name":"publicMintMaxLimit",
+         "outputs":[
+            {
+               "internalType":"uint256",
+               "name":"",
+               "type":"uint256"
+            }
+         ],
+         "stateMutability":"view",
+         "type":"function"
+      },
+      {
+         "inputs":[
+            {
+               "internalType":"address",
+               "name":"account",
+               "type":"address"
+            }
+         ],
+         "name":"releasable",
+         "outputs":[
+            {
+               "internalType":"uint256",
+               "name":"",
+               "type":"uint256"
+            }
+         ],
+         "stateMutability":"view",
+         "type":"function"
+      },
+      {
+         "inputs":[
+            {
+               "internalType":"contract IERC20",
+               "name":"token",
+               "type":"address"
+            },
+            {
+               "internalType":"address",
+               "name":"account",
+               "type":"address"
+            }
+         ],
+         "name":"releasable",
          "outputs":[
             {
                "internalType":"uint256",
@@ -715,7 +819,7 @@ export default function ContractABI() {
             },
             {
                "internalType":"bytes",
-               "name":"_data",
+               "name":"data",
                "type":"bytes"
             }
          ],
@@ -829,18 +933,28 @@ export default function ContractABI() {
                "type":"uint256"
             },
             {
+               "internalType":"uint256",
+               "name":"_mintMultiplier",
+               "type":"uint256"
+            },
+            {
+               "internalType":"address",
+               "name":"setCrossMintAddress",
+               "type":"address"
+            },
+            {
                "internalType":"bool",
                "name":"setPublicMintState",
                "type":"bool"
             },
             {
                "internalType":"bool",
-               "name":"setPrivateMintState",
+               "name":"setPublicCrossMintIsOpen",
                "type":"bool"
             },
             {
                "internalType":"bool",
-               "name":"setBogoMintState",
+               "name":"setPrivateMintState",
                "type":"bool"
             }
          ],
@@ -1018,17 +1132,6 @@ export default function ContractABI() {
          "inputs":[
             
          ],
-         "name":"toggleBogoMint",
-         "outputs":[
-            
-         ],
-         "stateMutability":"nonpayable",
-         "type":"function"
-      },
-      {
-         "inputs":[
-            
-         ],
          "name":"togglePresaleMint",
          "outputs":[
             
@@ -1179,6 +1282,21 @@ export default function ContractABI() {
             }
          ],
          "name":"transferOwnership",
+         "outputs":[
+            
+         ],
+         "stateMutability":"nonpayable",
+         "type":"function"
+      },
+      {
+         "inputs":[
+            {
+               "internalType":"uint256",
+               "name":"_multiplier",
+               "type":"uint256"
+            }
+         ],
+         "name":"updateMultiplier",
          "outputs":[
             
          ],
